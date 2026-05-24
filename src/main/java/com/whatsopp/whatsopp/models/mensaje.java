@@ -11,4 +11,5 @@ import com.whatsopp.whatsopp.models.ids.MensajeId;
 public class Mensaje {
     @EmbeddedId
     private MensajeId mensajeId;
+    
 }
