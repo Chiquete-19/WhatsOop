@@ -26,7 +26,7 @@ public class MensajeModel {
     }
     public void setMensaje_id(Long mensaje_id) {
         this.mensaje_id = mensaje_id;
-    }
+    }a
     public UsuarioModel getRemitente() {
         return remitente;
     }
