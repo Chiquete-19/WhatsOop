@@ -26,7 +26,7 @@ public class MensajeService {
             mensajeRepository.save(mensajeModel);
             return "bien";
         }
-        
+             
         return "mal";
     }
 }
