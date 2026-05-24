@@ -1,19 +1,14 @@
 package com.whatsopp.whatsopp.models;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-import com.whatsopp.whatsopp.models.ids.mensajeId;
+import com.whatsopp.whatsopp.models.ids.MensajeId;
 
 @Entity
 @Table(name="mensaje")
-public class mensaje {
+public class Mensaje {
     @EmbeddedId
-    private mensajeId mensajeId;
-    
+    private MensajeId mensajeId;
 }

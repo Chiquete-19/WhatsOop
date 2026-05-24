@@ -9,21 +9,21 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name="contenido")
-public class contenido {
+public class Contenido {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long contenido_id;
 
     @Column(nullable = false)
     private String contenido;
 
-    public Long getId() {
-        return id;
+    public Long getContenido_id() {
+        return contenido_id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setContenido_id(Long contenido_id) {
+        this.contenido_id = contenido_id;
     }
 
     public String getContenido() {
