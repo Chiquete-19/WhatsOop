@@ -10,6 +10,10 @@ public class MensajeId implements Serializable {
     private Long remitente_id;
     private Long destinatario_id;
 
+    public MensajeId(){
+        
+    }
+
     public MensajeId(Long contenido_id, Long remitente, Long destinatario){
         this.contenido_id=contenido_id;
         this.remitente_id=remitente;

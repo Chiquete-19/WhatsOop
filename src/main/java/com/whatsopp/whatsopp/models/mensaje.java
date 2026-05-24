@@ -11,6 +11,8 @@ import com.whatsopp.whatsopp.models.ids.MensajeId;
 public class Mensaje {
     @EmbeddedId
     private MensajeId mensajeId;
-    
-    private String c;
+
+    public void setMensajeId(MensajeId mensajeId){
+        this.mensajeId=mensajeId;
+    }
 }
