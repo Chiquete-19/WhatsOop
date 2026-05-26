@@ -13,9 +13,30 @@ public class ChatParticipanteModel {
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private Long chat_participante_id;
     @ManyToOne
-    @JoinColumn(name="chat_id")
-    private ChatModel chat_id;
+    @JoinColumn(name="chat")
+    private ChatModel chat;
     @ManyToOne
-    @JoinColumn(name="usuario_id")
-    private UsuarioModel usuario_id;
+    @JoinColumn(name="usuario")
+    private UsuarioModel usuario;
+
+    public Long getChat_participante_id() {
+        return chat_participante_id;
+    }
+    public void setChat_participante_id(Long chat_participante_id) {
+        this.chat_participante_id = chat_participante_id;
+    }
+    public ChatModel getChat() {
+        return chat;
+    }
+    public void setChat(ChatModel chat) {
+        this.chat = chat;
+    }
+    public UsuarioModel getUsuario_id() {
+        return usuario;
+    }
+    public void setUsuario(UsuarioModel usuario) {
+        this.usuario = usuario;
+    }
+
+    
 }

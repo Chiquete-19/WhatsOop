@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.whatsopp.whatsopp.models.ChatModel;
+import com.whatsopp.whatsopp.models.ChatParticipanteModel;
 import com.whatsopp.whatsopp.service.ChatParticipanteService;
 import com.whatsopp.whatsopp.service.ChatService;
 import com.whatsopp.whatsopp.Dtos.UsuarioDto;
@@ -27,9 +28,11 @@ public class ChatController {
     private ChatParticipanteService chatParticipanteService;
 
     @GetMapping
-    public List<ChatModel> getChats(@RequestBody UsuarioDto usuario) {
-        chatParticipanteService.getChatParticipanteByUsuario_Id(usuario.getUsuario_id());
-        chatService.getChatsByUsuario_Id(usuario.getUsuario_id());
+    public List<ChatDto> getChats(@RequestBody UsuarioDto usuario) {
+        List<ChatParticipanteModel> chatsParticipantes = chatParticipanteService.getChatParticipanteByUsuario_Id(usuario.getUsuario_id());
+        if(chatsParticipantes!=null){
+            
+        }
         return null;
     }
     
