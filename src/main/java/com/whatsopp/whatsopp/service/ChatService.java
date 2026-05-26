@@ -9,7 +9,7 @@ import com.whatsopp.whatsopp.models.ChatModel;
 public class ChatService {
 
 
-    public List<ChatModel> getChatsByUsuarioId(Long usuario_id){
+    public List<ChatModel> getChatsByUsuario_Id(Long usuario_id){
         
         return null;
     }

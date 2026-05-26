@@ -13,7 +13,8 @@ public class ChatParticipanteService {
 
     @Autowired
     private ChatParticipanteRepository repository;
-    public List<ChatParticipanteModel> getChatParticipanteByUsuarioId(Long usuario_id){
+
+    public List<ChatParticipanteModel> getChatParticipanteByUsuario_Id(Long usuario_id){
         return repository.findByUsuario_Id(usuario_id);
     }
 }
