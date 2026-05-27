@@ -13,6 +13,7 @@ import com.whatsopp.whatsopp.models.ChatParticipanteModel;
 import com.whatsopp.whatsopp.service.ChatParticipanteService;
 import com.whatsopp.whatsopp.service.ChatService;
 import com.whatsopp.whatsopp.Dtos.UsuarioDto;
+import com.whatsopp.whatsopp.Dtos.ChatDto;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
