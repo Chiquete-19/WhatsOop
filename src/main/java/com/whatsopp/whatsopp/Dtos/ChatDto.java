@@ -1,17 +1,19 @@
 package com.whatsopp.whatsopp.Dtos;
 
+import java.util.Date;
+
 public class ChatDto {
 
     private Long chat_id;
     private String chat_nombre;
-    private String chat_tipo;
-    private String chat_fecha_ultima_actualizacion;
+    private int chat_tipo;
+    private Date chat_fecha_ultima_actualizacion;
 
     public ChatDto(){
 
     }
 
-    public ChatDto(Long chat_id, String chat_nombre, String chat_tipo, String chat_fecha_ultima_actualizacion) {
+    public ChatDto(Long chat_id, String chat_nombre, int chat_tipo, Date chat_fecha_ultima_actualizacion) {
         this.chat_id = chat_id;
         this.chat_nombre = chat_nombre;
         this.chat_tipo = chat_tipo;
@@ -34,19 +36,19 @@ public class ChatDto {
         this.chat_nombre = chat_nombre;
     }
 
-    public String getChat_tipo() {
+    public int getChat_tipo() {
         return chat_tipo;
     }
 
-    public void setChat_tipo(String chat_tipo) {
+    public void setChat_tipo(int chat_tipo) {
         this.chat_tipo = chat_tipo;
     }
 
-    public String getChat_fecha_ultima_actualizacion() {
+    public Date getChat_fecha_ultima_actualizacion() {
         return chat_fecha_ultima_actualizacion;
     }
 
-    public void setChat_fecha_ultima_actualizacion(String chat_fecha_ultima_actualizacion) {
+    public void setChat_fecha_ultima_actualizacion(Date chat_fecha_ultima_actualizacion) {
         this.chat_fecha_ultima_actualizacion = chat_fecha_ultima_actualizacion;
     }
     

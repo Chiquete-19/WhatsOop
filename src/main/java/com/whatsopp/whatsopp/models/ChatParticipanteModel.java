@@ -31,7 +31,7 @@ public class ChatParticipanteModel {
     public void setChat(ChatModel chat) {
         this.chat = chat;
     }
-    public UsuarioModel getUsuario_id() {
+    public UsuarioModel getUsuario() {
         return usuario;
     }
     public void setUsuario(UsuarioModel usuario) {

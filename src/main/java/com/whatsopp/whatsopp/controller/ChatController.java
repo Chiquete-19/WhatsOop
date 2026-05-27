@@ -10,8 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.whatsopp.whatsopp.models.ChatModel;
 import com.whatsopp.whatsopp.models.ChatParticipanteModel;
+import com.whatsopp.whatsopp.models.UsuarioModel;
 import com.whatsopp.whatsopp.service.ChatParticipanteService;
 import com.whatsopp.whatsopp.service.ChatService;
+import com.whatsopp.whatsopp.service.UsuarioService;
 import com.whatsopp.whatsopp.Dtos.UsuarioDto;
 import com.whatsopp.whatsopp.Dtos.ChatDto;
 
@@ -27,12 +29,15 @@ public class ChatController {
     private ChatService chatService;
     @Autowired
     private ChatParticipanteService chatParticipanteService;
+    @Autowired
+    private UsuarioService usuarioService;
 
     @GetMapping
-    public List<ChatDto> getChats(@RequestBody UsuarioDto usuario) {
-        List<ChatParticipanteModel> chatsParticipantes = chatParticipanteService.getChatParticipanteByUsuario_Id(usuario.getUsuario_id());
+    public List<ChatDto> getChats(@RequestBody UsuarioDto usuarioRequest) {
+        UsuarioModel usuario =  usuarioService.getUsuarioById(usuarioRequest.getUsuario_id());
+        List<ChatParticipanteModel> chatsParticipantes = chatParticipanteService.getChatParticipanteByUsuario(usuario);
         if(chatsParticipantes!=null){
-            
+            return chatsParticipantes.stream().map(chat-> new ChatDto(chat.getChat().getChat_id(),chat.getChat().getChat_nombre(),chat.getChat().getChat_tipo(),chat.getChat().getChat_fecha_ultima_modificacion())).toList();
         }
         return null;
     }
